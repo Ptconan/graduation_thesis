@@ -1,0 +1,31 @@
+# Generated experiment outputs
+generated_results/
+result_*.mat
+result_*.png
+run_*_log.txt
+*_topology.png
+
+# MATLAB temporary and autosave files
+*.asv
+*.m~
+*.mex*
+slprj/
+sccprj/
+codegen/
+
+# Local data and generated matrix dumps
+*.mat
+sqrtK.txt
+strmM.txt
+truss_data.txt
+
+# Local solver/toolbox copies and archives
+cvx/
+cvx_old/
+cvx-*.zip
+*.zip
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
