@@ -18,4 +18,4 @@
 
    致那段喜忧参半的时光--zb
 
-<img src="C:\Users\liwei\Pictures\微信图片_20260627190900_12_29.jpg" alt="答辩前的忐忑" style="zoom:25%;" />
+<img src="D:\doucument\doc——\graduation_thesis\COAP_distribution\COAP_distribution\mood.jpg" style="zoom:25%;" />
