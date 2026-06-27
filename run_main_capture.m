@@ -2,13 +2,19 @@ clearvars;
 close all;
 clc;
 
-out_dir = fullfile(pwd, 'generated_results', datestr(now, 'yyyymmdd_HHMMSS_main'));
+timestamp = datestr(now, 'yyyymmdd_HHMMSS');
+out_dir = fullfile(pwd, 'generated_results', [timestamp, '_main']);
 if ~exist(out_dir, 'dir')
     mkdir(out_dir);
 end
+state_file = fullfile(pwd, 'generated_results', 'run_main_capture_state.mat');
+save(state_file, 'out_dir');
 
 diary(fullfile(out_dir, 'run_main_log.txt'));
 main;
+state_file = fullfile(pwd, 'generated_results', 'run_main_capture_state.mat');
+load(state_file, 'out_dir');
+delete(state_file);
 
 result_file = fullfile(out_dir, 'result_main.mat');
 save(result_file, 'alg', 'alg_list', 'alg_name', 'data_obj', 'data_lambda', ...

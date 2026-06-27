@@ -15,8 +15,8 @@ warning('off', 'manopt:getHessian:approx');
 
 %% 1. 物理参数与矩阵装配
 Flag.save = 0;
-nx = 4; 
-ny = 4;
+nx = 8; 
+ny = 8;
 
 if nx == 4 && ny == 4
     opt_value = -51.4026958936;
@@ -55,8 +55,8 @@ maxiter_bisect = 40;
 rank_p = min(10, max(4, round(nd / 20)));
 max_alt = 250;
 step0_x = 0.8;
-mu_smooth = 1;
-beta_mom = 0.90; % 动量保留系数
+mu_smooth = 0.05;
+beta_mom = 0.85; % 动量保留系数
 
 manifold = stiefelfactory(nd, rank_p);
 probY.M = manifold;
